@@ -13,4 +13,15 @@
   - bundle add webrick (Compile Error 제거)
   - bundle exec jekyll serve
   - http://localhost:4000 주소로 접속
+- Pure Jekyll site 생성 ./__pureJekyllBlog
+  - mkdir __pureJekyllBlog
+  - cd __pureJekyllBlog
+  - bundle init
+  - gem "jekyll" 추가 (Gemfile 수정)
+  - bundle add webrick (Compile Error 제거)
+  - bundle (Gemfile.lock 생성)
+  - index.html 생성 
+  - jekyll build (static _site 생성)
+  - jekyll serve (local web server)
+  - http://localhost:4000 주소로 접속
   
