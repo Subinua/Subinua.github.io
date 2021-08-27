@@ -56,3 +56,12 @@ Jekyll이 사용하는 템플릿 언어
 ### Includes
   - _includes\navigation.html 제작
   - default layout에 적용해 보기
+### Data Files
+- Jekyll은 _data 디렉토리에 위치한 YAML, JSON, CSV 파일로부터 데이터를 가져오는 것을 지원한다.  
+- 데이터 파일은 콘텐츠를 소스코드로부터 분리하여 사이트를 관리하기 쉽게 만들어주는 좋은 방법이다.
+- 새로운 콘텐츠를 추가하거나 변경할 때 편리.
+- 네비게이션의 콘텐츠를 데이터 파일로 보관하고, 네비게이션에 포함된 것들을 반복문을 이용해 사용해 보기
+  - _data\navigation.yml 제작
+  - navigation.yml에 있는 각각의 이름과 링크 쌍을 배열로 보관하여 사용
+  - {{ site.data.navigation }}
+  
