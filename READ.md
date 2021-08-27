@@ -27,6 +27,7 @@
   - jekyll serve (local web server)
   - http://localhost:4000 주소로 접속
 ## Jekyll site 수정
+[참고 Site](https://til.younho9.dev/docs/frontend/jekyll/jekyll-github-page%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%B4-%EA%B0%9C%EC%9D%B8%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0)
 ### Liquid
 Jekyll이 사용하는 템플릿 언어
 - Object
@@ -118,3 +119,41 @@ Jekyll에선 데이터베이스없이 오로지 text 파일만으로 blogging하
     - 각각의 포스트는 author의 페이지로 갈 수 있는 링크를 가져야할 것이다.
     - 위에서 한 것과 비슷한 필터링 기술을 사용해서 할 수 있다.
       - layouts/post.html 수정
+### 배포
+- Gemfile을 루트 디렉토리에 만든다.
+  - source 'https://rubygems.org'
+  - gem 'jekyll'
+- bundle install 실행 => Gemfile.lock 생성
+- bundle exec jekyll serve
+- 플러그인
+  - ```
+    group :jekyll_plugins do
+      gem 'jekyll-sitemap'
+      gem 'jekyll-feed'
+      gem 'jekyll-seo-tag'
+    end
+    ```
+  - _config.yml 에도 추가
+    - ```
+      plugins:
+        - jekyll-feed
+        - jekyll-sitemap
+        - jekyll-seo-tag
+      ```
+- bundle update 실행
+  -jekyll-feed 와 jekyll-seo-tag 를 사용하기 위해서는 _layouts/default.html 에 따로 태그를 추가해 주어야 한다. 
+  - bundle exec jekyll serve 
+- Environments
+  - 때때로 사이트를 만들었을 때는 결과를 표시하고 싶지만, 개발 중일 때는 표시하지 않고 싶을 수 있다. disqus 또는 Google Analytics 등이 그러한데, 이것을 위해서는 environments를 사용할 수 있다.
+  - JEKYLL_ENV 라는 환경 변수를 사용한다.
+    - ```JEKYLL_ENV=production bundle exec jekyll build```
+    - ```
+      {% if jekyll.environment == "production" %}
+      <script src="my-analytics-script.js"></script>
+      {% endif %}
+      ```
+- 서버에 배포
+  - JEKYLL_ENV=production bundle exec jekyll build
+  - 이후 _site 디렉토리의 콘텐츠를 복사해 서버로 제공한다.
+    - [Github Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/)
+    
