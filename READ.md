@@ -86,3 +86,35 @@ Jekyll에선 데이터베이스없이 오로지 text 파일만으로 blogging하
 - Jekyll에서는 포스트들을 site.posts 로 접근할 수 있다.
 - blog.html을 루트 디렉토리에 제작하여 posts 관리
 - _data\navigation.yml에 blog 엔트리 추가
+### Collections
+만약에 블로그의 저자들 각각을 위한 간단한 소개말과 그들의 포스트들을 볼 수 있는 저자들만의 페이지를 만들고 싶다면 어떻게 해야할까?
+컬렉션은 콘텐츠를 날짜별로 그룹화하지 않아도 된다는 점을 제외하면 포스트와 유사하다.
+- 컬렉션을 만들기 위해서 Jekyll에게 _config.yml 을 통해 알려주어야 한다.
+  - 먼저 _config.yml 파일을 만든다.
+  - _config.yml 파일을 수정한 후에 변경사항을 반영하기 위해서는 Jekyll 서버를 재시작해야 한다.
+- 컬렉션에 있는 아이템들(문서들)은 루트 디렉토리에 있는 _*collection_name* 디렉토리에 만들면 된다.
+  - 저자를 기준으로 컬렉션을 만들기 위해서는 _authors 로 만들면 적절할 것이다.
+- 저자에 관한 문서들을 만들어보자.
+  - _authors\jill.md 등
+- 모든 저자들을 리스트해서 보여주는 페이지를 추가해보자.
+  - Jekyll은 컬렉션을 site.authors 변수를 통해 이용할 수 있도록 해준다.
+  - 루트 디렉토리에 staff.html 을 만든다.
+- _data/navigation.yml 에 추가
+- 기본적으로 컬렉션은 문서의 페이지를 출력하지 않는다.
+  - 만약 각 저자 마다 페이지를 만들어주고 싶다면 _config.yml 파일을 살짝 수정해야 한다.
+  - output: true 추가
+- staff.html에 링크 추가
+- post와 같이 authors를 위한 layout을 만든다.
+  - _layouts/author.html 제작
+  - 이렇게 만든 author 레이아웃을 author들, jill.md 와 ted.md 의 front matter에 표시해주어야 하지만 이것은 계속 반복되는 작업이다. 따라서 다른 방법을 사용해볼 수 있다.
+    - 우리가 원하는 것은 자동적으로 포스트들은 post 레이아웃을 사용하고, author들은 author 레이아웃을 사용하는 것이다.
+    - _config.yml에 front matter default를 적용
+      - 기본값을 적용할 scope 를 정하고, 기본값으로 들어갈 front matter를 넣으면 된다.
+    - 이제 모든 page 들과 post 들의 front matter에서 layout 에 관한 부분을 다 지워도 된다.
+  - List author's posts
+    - 각 author가 쓴 포스트들을 그들의 페이지에 필터링해서 보여주기.
+    - author의 short_name 과 post의 author 가 매치될 필요가 있다.
+  - Link to authors page
+    - 각각의 포스트는 author의 페이지로 갈 수 있는 링크를 가져야할 것이다.
+    - 위에서 한 것과 비슷한 필터링 기술을 사용해서 할 수 있다.
+      - layouts/post.html 수정
