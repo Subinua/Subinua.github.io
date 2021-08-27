@@ -53,3 +53,6 @@ Jekyll이 사용하는 템플릿 언어
   - {{ content }} 는 호출된 페이지의 렌더링된 콘텐츠 값을 갖는 특수 변수
   - index.html에 ```layout: default``` 추가
   - about.md에 layout 적용해 보기
+### Includes
+  - _includes\navigation.html 제작
+  - default layout에 적용해 보기
