@@ -64,4 +64,16 @@ Jekyll이 사용하는 템플릿 언어
   - _data\navigation.yml 제작
   - navigation.yml에 있는 각각의 이름과 링크 쌍을 배열로 보관하여 사용
   - {{ site.data.navigation }}
-  
+### Assets
+- Jekyll에서는 CSS, JS, 이미지, 다른 asset들을 직접적으로 사용할 수 있다. 
+- 그것들을 Assets site 폴더에 넣으면 빌드된 사이트로 복사된다.
+- _includes/navigation.html 에 사용된 인라인 스타일은 좋은 방법이 아니다.
+  - 스타일을 클래스로 지정하는 방법으로 바꿔 본다.
+  - 표준 CSS를 사용하는 것도 가능하지만 Sass를 이용한다.
+  - Sass는 Jekyll에 CSS를 바로 올릴 수 있는 환상적인 확장이다.
+  - assets\css\styles.scss 작성 => _site\assets\css\styles.css로 복사됨
+  - _sass\main.css 작성 
+  - default.html 에서 사용
+    - ```
+      <link rel="stylesheet" href="/assets/css/styles.css" />
+      ```
