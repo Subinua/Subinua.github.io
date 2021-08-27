@@ -48,4 +48,8 @@ Jekyll이 사용하는 템플릿 언어
   ---
   {{ page.my_number }}
   ```
-  
+### Layouts
+  - _layouts\default.html 제작
+  - {{ content }} 는 호출된 페이지의 렌더링된 콘텐츠 값을 갖는 특수 변수
+  - index.html에 ```layout: default``` 추가
+  - about.md에 layout 적용해 보기
