@@ -77,3 +77,12 @@ Jekyll이 사용하는 템플릿 언어
     - ```
       <link rel="stylesheet" href="/assets/css/styles.css" />
       ```
+### Blogging
+Jekyll에선 데이터베이스없이 오로지 text 파일만으로 blogging하는 것이 가능하다.
+- 블로그 포스트는 _posts 라는 폴더에 있다.
+- 포스트의 파일명은 특별한 포맷을 가지는데 발행일, 제목, 확장자 이다.
+- 첫 포스트를 _posts\2021-08-27-Test.md로 제작해 보기
+- post layout 제작
+- Jekyll에서는 포스트들을 site.posts 로 접근할 수 있다.
+- blog.html을 루트 디렉토리에 제작하여 posts 관리
+- _data\navigation.yml에 blog 엔트리 추가
