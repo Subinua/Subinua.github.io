@@ -1,7 +1,9 @@
 # 나의 블로그
 ## 준비
 - ### Ruby 설치
-  - 설치 마지막 ridk install
+  - [루비 설치](https://subinua.github.io/mydoc_install_jekyll_on_windows.html)
+  - [루비 Download](https://rubyinstaller.org/downloads/)
+  - 설치 마지막에 "ridk install" 선택
   - ruby -v
   - get -v
 - ### Jekyll 설치
