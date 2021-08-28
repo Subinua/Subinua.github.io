@@ -1,0 +1,3 @@
+[submodule "__minimal-mistakes"]
+	path = __minimal-mistakes
+	url = https://github.com/mmistakes/minimal-mistakes
