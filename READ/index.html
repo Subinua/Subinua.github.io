@@ -1,0 +1,771 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>나의 블로그 - Java, Web App, Spring</title>
+<meta name="description" content="Java와 Web App, Spring Boot 등 SI 개발을 공부하는 블로그.">
+
+
+  <meta name="author" content="박수빈의 블로그">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Java, Web App, Spring">
+<meta property="og:title" content="나의 블로그">
+<meta property="og:url" content="https://subinua.github.io/pages/Subinua/READ/">
+
+
+  <meta property="og:description" content="Java와 Web App, Spring Boot 등 SI 개발을 공부하는 블로그.">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://subinua.github.io/pages/Subinua/READ/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "박수빈",
+      "url": "https://subinua.github.io/pages/Subinua/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/pages/Subinua/feed.xml" type="application/atom+xml" rel="alternate" title="Java, Web App, Spring Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/pages/Subinua/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--page">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/pages/Subinua/"><img src="/pages/Subinua/assets/images/JavaBeans.jpg" alt="자바, 웹, 스프링"></a>
+        
+        <a class="site-title" href="/pages/Subinua/">
+          자바, 웹, 스프링
+          <span class="site-subtitle">v0.1.4</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/pages/Subinua/categories/">카테고리</a>
+            </li><li class="masthead__menu-item">
+              <a href="/pages/Subinua/tags/">태그</a>
+            </li><li class="masthead__menu-item">
+              <a href="/pages/Subinua/posts/">포스트</a>
+            </li><li class="masthead__menu-item">
+              <a href="/pages/Subinua/about">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/">Minimalistic</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      <h1 id="나의-블로그">나의 블로그</h1>
+<h2 id="준비">준비</h2>
+<ul>
+  <li>
+    <h3 id="ruby-설치">Ruby 설치</h3>
+    <ul>
+      <li><a href="https://subinua.github.io/mydoc_install_jekyll_on_windows.html">루비 설치</a></li>
+      <li><a href="https://rubyinstaller.org/downloads/">루비 Download</a></li>
+      <li>설치 마지막에 “ridk install” 선택</li>
+      <li>ruby -v</li>
+      <li>get -v</li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="jekyll-설치">Jekyll 설치</h3>
+    <ul>
+      <li>gem install jekyll bundler
+        <ul>
+          <li>jekyll -v
+            <h2 id="새-jekyll-site-생성">새 Jekyll site 생성</h2>
+          </li>
+        </ul>
+      </li>
+      <li>./myFirstJekyllBlog</li>
+      <li>jekyll new myFirstJekyllBlog</li>
+      <li>cd myFirstJekyllBlog</li>
+      <li>bundle add webrick (Compile Error 제거)</li>
+      <li>bundle exec jekyll serve</li>
+      <li>http://localhost:4000 주소로 접속
+        <h2 id="pure-jekyll-site-생성">Pure Jekyll site 생성</h2>
+      </li>
+      <li>./__pureJekyllBlog</li>
+      <li>mkdir __pureJekyllBlog</li>
+      <li>cd __pureJekyllBlog</li>
+      <li>bundle init</li>
+      <li>gem “jekyll” 추가 (Gemfile 수정)</li>
+      <li>bundle add webrick (Compile Error 제거)</li>
+      <li>bundle (Gemfile.lock 생성)</li>
+      <li>index.html 생성</li>
+      <li>jekyll build (static _site 생성)</li>
+      <li>jekyll serve (local web server)</li>
+      <li>http://localhost:4000 주소로 접속
+        <h2 id="jekyll-site-수정">Jekyll site 수정</h2>
+        <p><a href="https://til.younho9.dev/docs/frontend/jekyll/jekyll-github-page%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%B4-%EA%B0%9C%EC%9D%B8%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0">참고 Site</a></p>
+        <h3 id="liquid">Liquid</h3>
+        <p>Jekyll이 사용하는 템플릿 언어</p>
+      </li>
+    </ul>
+  </li>
+  <li>Object
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">나의 블로그</code></li>
+    </ul>
+  </li>
+  <li>Tag
+    <ul>
+      <li>
+        <pre><code class="language-Liquid">    
+</code></pre>
+      </li>
+    </ul>
+  </li>
+  <li>Filter
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Hi</code>
+        <h3 id="front-matter">Front Matter</h3>
+        <p>문서의 상단에 있는 두 개의 — 사이에 들어가는 YAML 조각</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <pre><code class="language-Liquid">---
+# Front Matter
+my_number: 5
+---
+  
+</code></pre>
+    <h3 id="layouts">Layouts</h3>
+    <ul>
+      <li>_layouts\default.html 제작</li>
+      <li></li>
+    </ul>
+  </li>
+</ul>
+
+<nav class="breadcrumbs">
+  <ol itemscope="" itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+          <a href="/pages/Subinua/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">Posts by Year</li>
+      
+    
+  </ol>
+</nav>
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope="" itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://subinua.github.io/pages/Subinua/">
+        <img src="/pages/Subinua/assets/images/Question.jpg" alt="박수빈의 블로그" itemprop="image" class="u-photo" />
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://subinua.github.io/pages/Subinua/" itemprop="url">박수빈의 블로그</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>日日新 又日新 自强不息</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope="" itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Seoul, Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:dcb20258@knou.ac.kr" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+            <li><a href="https://Subinua.github.io" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/Subinua" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">Posts by Year</h1>
+    
+    
+
+
+<ul class="taxonomy__index">
+  
+  
+    <li>
+      <a href="#2021">
+        <strong>2021</strong> <span class="taxonomy__count">1</span>
+      </a>
+    </li>
+  
+</ul>
+
+
+
+
+  <section id="2021" class="taxonomy__section">
+    <h2 class="archive__subtitle">2021</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/pages/Subinua/jekyll/update/welcome-to-jekyll/" rel="permalink">Welcome to Jekyll!
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different wa...</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">맨 위로 이동 &uarr;</a>
+  </section>
+
+
+  </div>
+</div>
+<p>는 호출된 페이지의 렌더링된 콘텐츠 값을 갖는 특수 변수</p>
+<ul>
+  <li>index.html에 <code class="language-plaintext highlighter-rouge">layout: default</code> 추가</li>
+  <li>about.md에 layout 적용해 보기
+    <h3 id="includes">Includes</h3>
+  </li>
+  <li>_includes\navigation.html 제작</li>
+  <li>default layout에 적용해 보기
+    <h3 id="data-files">Data Files</h3>
+  </li>
+  <li>Jekyll은 _data 디렉토리에 위치한 YAML, JSON, CSV 파일로부터 데이터를 가져오는 것을 지원한다.</li>
+  <li>데이터 파일은 콘텐츠를 소스코드로부터 분리하여 사이트를 관리하기 쉽게 만들어주는 좋은 방법이다.</li>
+  <li>새로운 콘텐츠를 추가하거나 변경할 때 편리.</li>
+  <li>네비게이션의 콘텐츠를 데이터 파일로 보관하고, 네비게이션에 포함된 것들을 반복문을 이용해 사용해 보기
+    <ul>
+      <li>_data\navigation.yml 제작</li>
+      <li>navigation.yml에 있는 각각의 이름과 링크 쌍을 배열로 보관하여 사용</li>
+      <li>{“main”=&gt;[{“title”=&gt;”카테고리”, “url”=&gt;”/categories/”}, {“title”=&gt;”태그”, “url”=&gt;”/tags/”}, {“title”=&gt;”포스트”, “url”=&gt;”/posts/”}, {“title”=&gt;”About”, “url”=&gt;”/about”}, {“title”=&gt;”Minimalistic”, “url”=&gt;”https://mmistakes.github.io/minimal-mistakes/”}]}
+        <h3 id="assets">Assets</h3>
+      </li>
+    </ul>
+  </li>
+  <li>Jekyll에서는 CSS, JS, 이미지, 다른 asset들을 직접적으로 사용할 수 있다.</li>
+  <li>그것들을 Assets site 폴더에 넣으면 빌드된 사이트로 복사된다.</li>
+  <li>_includes/navigation.html 에 사용된 인라인 스타일은 좋은 방법이 아니다.
+    <ul>
+      <li>스타일을 클래스로 지정하는 방법으로 바꿔 본다.</li>
+      <li>표준 CSS를 사용하는 것도 가능하지만 Sass를 이용한다.</li>
+      <li>Sass는 Jekyll에 CSS를 바로 올릴 수 있는 환상적인 확장이다.</li>
+      <li>assets\css\styles.scss 작성 =&gt; _site\assets\css\styles.css로 복사됨</li>
+      <li>_sass\main.css 작성</li>
+      <li>default.html 에서 사용
+        <ul>
+          <li>
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link rel="stylesheet" href="/assets/css/styles.css" /&gt;
+</code></pre></div>            </div>
+            <h3 id="blogging">Blogging</h3>
+            <p>Jekyll에선 데이터베이스없이 오로지 text 파일만으로 blogging하는 것이 가능하다.</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>블로그 포스트는 _posts 라는 폴더에 있다.</li>
+  <li>포스트의 파일명은 특별한 포맷을 가지는데 발행일, 제목, 확장자 이다.</li>
+  <li>첫 포스트를 _posts\2021-08-27-Test.md로 제작해 보기</li>
+  <li>post layout 제작</li>
+  <li>Jekyll에서는 포스트들을 site.posts 로 접근할 수 있다.</li>
+  <li>blog.html을 루트 디렉토리에 제작하여 posts 관리</li>
+  <li>_data\navigation.yml에 blog 엔트리 추가
+    <h3 id="collections">Collections</h3>
+    <p>만약에 블로그의 저자들 각각을 위한 간단한 소개말과 그들의 포스트들을 볼 수 있는 저자들만의 페이지를 만들고 싶다면 어떻게 해야할까?
+컬렉션은 콘텐츠를 날짜별로 그룹화하지 않아도 된다는 점을 제외하면 포스트와 유사하다.</p>
+  </li>
+  <li>컬렉션을 만들기 위해서 Jekyll에게 _config.yml 을 통해 알려주어야 한다.
+    <ul>
+      <li>먼저 _config.yml 파일을 만든다.</li>
+      <li>_config.yml 파일을 수정한 후에 변경사항을 반영하기 위해서는 Jekyll 서버를 재시작해야 한다.</li>
+    </ul>
+  </li>
+  <li>컬렉션에 있는 아이템들(문서들)은 루트 디렉토리에 있는 _<em>collection_name</em> 디렉토리에 만들면 된다.
+    <ul>
+      <li>저자를 기준으로 컬렉션을 만들기 위해서는 _authors 로 만들면 적절할 것이다.</li>
+    </ul>
+  </li>
+  <li>저자에 관한 문서들을 만들어보자.
+    <ul>
+      <li>_authors\jill.md 등</li>
+    </ul>
+  </li>
+  <li>모든 저자들을 리스트해서 보여주는 페이지를 추가해보자.
+    <ul>
+      <li>Jekyll은 컬렉션을 site.authors 변수를 통해 이용할 수 있도록 해준다.</li>
+      <li>루트 디렉토리에 staff.html 을 만든다.</li>
+    </ul>
+  </li>
+  <li>_data/navigation.yml 에 추가</li>
+  <li>기본적으로 컬렉션은 문서의 페이지를 출력하지 않는다.
+    <ul>
+      <li>만약 각 저자 마다 페이지를 만들어주고 싶다면 _config.yml 파일을 살짝 수정해야 한다.</li>
+      <li>output: true 추가</li>
+    </ul>
+  </li>
+  <li>staff.html에 링크 추가</li>
+  <li>post와 같이 authors를 위한 layout을 만든다.
+    <ul>
+      <li>_layouts/author.html 제작</li>
+      <li>이렇게 만든 author 레이아웃을 author들, jill.md 와 ted.md 의 front matter에 표시해주어야 하지만 이것은 계속 반복되는 작업이다. 따라서 다른 방법을 사용해볼 수 있다.
+        <ul>
+          <li>우리가 원하는 것은 자동적으로 포스트들은 post 레이아웃을 사용하고, author들은 author 레이아웃을 사용하는 것이다.</li>
+          <li>_config.yml에 front matter default를 적용
+            <ul>
+              <li>기본값을 적용할 scope 를 정하고, 기본값으로 들어갈 front matter를 넣으면 된다.</li>
+            </ul>
+          </li>
+          <li>이제 모든 page 들과 post 들의 front matter에서 layout 에 관한 부분을 다 지워도 된다.</li>
+        </ul>
+      </li>
+      <li>List author’s posts
+        <ul>
+          <li>각 author가 쓴 포스트들을 그들의 페이지에 필터링해서 보여주기.</li>
+          <li>author의 short_name 과 post의 author 가 매치될 필요가 있다.</li>
+        </ul>
+      </li>
+      <li>Link to authors page
+        <ul>
+          <li>각각의 포스트는 author의 페이지로 갈 수 있는 링크를 가져야할 것이다.</li>
+          <li>위에서 한 것과 비슷한 필터링 기술을 사용해서 할 수 있다.
+            <ul>
+              <li>layouts/post.html 수정
+                <h3 id="배포">배포</h3>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Gemfile을 루트 디렉토리에 만든다.
+    <ul>
+      <li>source ‘https://rubygems.org’</li>
+      <li>gem ‘jekyll’</li>
+    </ul>
+  </li>
+  <li>bundle install 실행 =&gt; Gemfile.lock 생성</li>
+  <li>bundle exec jekyll serve</li>
+  <li>플러그인
+    <ul>
+      <li>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>group :jekyll_plugins do
+  gem 'jekyll-sitemap'
+  gem 'jekyll-feed'
+  gem 'jekyll-seo-tag'
+end
+</code></pre></div>        </div>
+      </li>
+      <li>_config.yml 에도 추가
+        <ul>
+          <li>```
+plugins:
+            <ul>
+              <li>jekyll-feed</li>
+              <li>jekyll-sitemap</li>
+              <li>jekyll-seo-tag
+```</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>bundle update 실행
+-jekyll-feed 와 jekyll-seo-tag 를 사용하기 위해서는 _layouts/default.html 에 따로 태그를 추가해 주어야 한다.
+    <ul>
+      <li>bundle exec jekyll serve</li>
+    </ul>
+  </li>
+  <li>Environments
+    <ul>
+      <li>때때로 사이트를 만들었을 때는 결과를 표시하고 싶지만, 개발 중일 때는 표시하지 않고 싶을 수 있다. disqus 또는 Google Analytics 등이 그러한데, 이것을 위해서는 environments를 사용할 수 있다.</li>
+      <li>JEKYLL_ENV 라는 환경 변수를 사용한다.
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">JEKYLL_ENV=production bundle exec jekyll build</code></li>
+          <li>
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      
+&lt;script src="my-analytics-script.js"&gt;&lt;/script&gt;
+      
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>서버에 배포
+    <ul>
+      <li>JEKYLL_ENV=production bundle exec jekyll build</li>
+      <li>이후 _site 디렉토리의 콘텐츠를 복사해 서버로 제공한다.
+        <ul>
+          <li><a href="https://jekyllrb.com/docs/continuous-integration/github-actions/">Github Actions</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="jekyll-theme-사용">Jekyll Theme 사용</h2>
+<ul>
+  <li><a href="https://github.com/mmistakes/minimal-mistakes">원본 Theme</a></li>
+  <li>Clone: __minimal-mistakes</li>
+  <li><a href="https://Subinua.github.io">GitHub Page Source</a>
+    <ul>
+      <li>main branch 사용</li>
+    </ul>
+  </li>
+  <li><a href="https://Subinua.github.io/gh-pages">Target GitHub Page</a>
+    <h3 id="설치">설치</h3>
+  </li>
+  <li>git submodule 사용</li>
+  <li>git submodule add https://github.com/mmistakes/minimal-mistakes __minimal-mistakes</li>
+  <li>작업 시, Submodule 포함 clone 방법
+    <ul>
+      <li>git clone –recurse-submodules https://github.com/Subinua/Subinua.github.io
+        <ul>
+          <li>git submodule init</li>
+          <li>git submodule update</li>
+        </ul>
+      </li>
+      <li>Submodule Update
+        <ul>
+          <li>git submodule update –remote
+            <ul>
+              <li>__minimal-mistakes 폴더에서</li>
+              <li>git fetch</li>
+              <li>git update
+                <h3 id="수정">수정</h3>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>__minimal-mistakes 파일 복사
+    <ul>
+      <li>제외 파일들:
+        <ul>
+          <li>.github, .git, .gitignore, .gitattributes, /docs, /test</li>
+          <li>.editorconfig, CHANGELOG.md, minimal-mistakes-jekyll.gemspec</li>
+          <li>README.md, screenshot-layouts.png, screenshot.png</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Gemfile 내용 변경</li>
+  <li>Add jekyll-include-cache to the plugins array of your _config.yml (이미 수정되어 있음)</li>
+  <li>bundle</li>
+  <li>_config.yml 수정
+    <ul>
+      <li>remote_theme: “mmistakes/minimal-mistakes@4.24.0”</li>
+      <li>repository: “Subinua/Subinua.github.io”</li>
+    </ul>
+  </li>
+  <li>bundle update</li>
+  <li>bundle add webrick</li>
+  <li>bundle exec jekyll serve</li>
+</ul>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:dcb20258@knou.ac.kr" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/Subinua" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/pages/Subinua/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 박수빈. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/pages/Subinua/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/pages/Subinua/assets/js/lunr/lunr.min.js"></script>
+<script src="/pages/Subinua/assets/js/lunr/lunr-store.js"></script>
+<script src="/pages/Subinua/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
