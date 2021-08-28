@@ -42,7 +42,7 @@ Jekyll이 사용하는 템플릿 언어
   - ```{{ "hi" | capitalize }}```
 ### Front Matter
 문서의 상단에 있는 두 개의 --- 사이에 들어가는 YAML 조각
-- ```
+- ```Liquid
   ---
   # Front Matter
   my_number: 5
@@ -156,4 +156,26 @@ Jekyll에선 데이터베이스없이 오로지 text 파일만으로 blogging하
   - JEKYLL_ENV=production bundle exec jekyll build
   - 이후 _site 디렉토리의 콘텐츠를 복사해 서버로 제공한다.
     - [Github Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/)
-    
+
+## Jekyll Theme 사용
+- [원본 Theme](https://github.com/mmistakes/minimal-mistakes)
+- Clone: __minimal-mistakes
+- [GitHub Page Source](https://Subinua.github.io)
+  - main branch 사용
+- [Target GitHub Page](https://Subinua.github.io/gh-pages)
+### 설치
+- git submodule 사용
+- git submodule add https://github.com/mmistakes/minimal-mistakes __minimal-mistakes
+- 작업 시, Submodule 포함 clone 방법
+  - git clone --recurse-submodules https://github.com/Subinua/Subinua.github.io
+    - git submodule init
+    - git submodule update
+  - Submodule Update
+    - git submodule update --remote
+      - __minimal-mistakes 폴더에서
+      - git fetch
+      - git update
+- __minimal-mistakes 파일 복사 후, Compile
+  - bundle update
+  - bundle add webrick
+  - bundle exec jekyll serve
