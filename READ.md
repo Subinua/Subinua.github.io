@@ -175,7 +175,18 @@ Jekyll에선 데이터베이스없이 오로지 text 파일만으로 blogging하
       - __minimal-mistakes 폴더에서
       - git fetch
       - git update
-- __minimal-mistakes 파일 복사 후, Compile
-  - bundle update
-  - bundle add webrick
-  - bundle exec jekyll serve
+### 수정
+- __minimal-mistakes 파일 복사 
+  - 제외 파일들:
+    - .github, .git, .gitignore, .gitattributes, /docs, /test
+    - .editorconfig, CHANGELOG.md, minimal-mistakes-jekyll.gemspec
+    - README.md, screenshot-layouts.png, screenshot.png
+- Gemfile 내용 변경
+- Add jekyll-include-cache to the plugins array of your _config.yml (이미 수정되어 있음)
+- bundle
+- _config.yml 수정
+  - remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+  - repository: "Subinua/Subinua.github.io"
+- bundle update
+- bundle add webrick
+- bundle exec jekyll serve
